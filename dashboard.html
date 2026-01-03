@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Nunito:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Raleway:wght@300;400;600&family=Roboto:wght@300;400;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Source+Sans+3:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Kanit:wght@300;400;600&family=Oswald:wght@300;400;600&family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard - My Day Planner</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#6a82fb" />
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="dashboard">
+  <div class="sidebar">
+    <div class="sidebar-top">
+      <h2>📅 Planner</h2>
+      <button id="bellBtn" class="icon-btn" title="Notifications">🔔
+        <span id="bellBadge" class="badge" hidden></span>
+      </button>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="recycle.html">Recycle Bin</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+
+  <div id="notifPanel" class="notif-panel" hidden>
+    <div class="notif-panel-header">
+      <strong>Notifications</strong>
+      <button id="reqPermBtn" class="mini-btn">Grant Permission</button>
+    </div>
+    <div id="notifList" class="notif-list"></div>
+  </div>
+
+  <main>
+    <h1>📊 Dashboard</h1>
+    <canvas id="categoryChart" width="320" height="320"></canvas>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

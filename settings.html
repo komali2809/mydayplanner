@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Nunito:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Raleway:wght@300;400;600&family=Roboto:wght@300;400;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Source+Sans+3:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Kanit:wght@300;400;600&family=Oswald:wght@300;400;600&family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Settings - My Day Planner</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#6a82fb" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="settings">
+  <div class="sidebar">
+    <div class="sidebar-top">
+      <h2>📅 Planner</h2>
+      <button id="bellBtn" class="icon-btn" title="Notifications">🔔
+        <span id="bellBadge" class="badge" hidden></span>
+      </button>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="recycle.html">Recycle Bin</a>
+      <a href="settings.html" class="active">Settings</a>
+    </nav>
+  </div>
+
+  <div id="notifPanel" class="notif-panel" hidden>
+    <div class="notif-panel-header">
+      <strong>Notifications</strong>
+      <button id="reqPermBtn" class="mini-btn">Grant Permission</button>
+    </div>
+    <div id="notifList" class="notif-list"></div>
+  </div>
+
+  <main>
+    <h1>Settings</h1>
+
+    <section class="settings-grid">
+      <div class="setting-item">
+        <label for="themeSelect">Theme</label>
+        <select id="themeSelect">
+          <option value="theme-default">Default</option>
+          <option value="theme-dark">Dark</option>
+          <option value="theme-pastel">Pastel</option>
+          <option value="theme-contrast">High Contrast</option>
+          <option value="theme-ocean">Ocean</option>
+          <option value="theme-forest">Forest</option>
+          <option value="theme-sunset">Sunset</option>
+          <option value="theme-neon">Neon</option>
+          <option value="theme-earth">Earth</option>
+          <option value="theme-rose">Rose</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label for="fontSelect">Font</label>
+        <select id="fontSelect">
+       
+  <option value="'Poppins', sans-serif">Poppins</option>
+  <option value="'Inter', sans-serif">Inter</option>
+  <option value="'Nunito', sans-serif">Nunito</option>
+  <option value="'Montserrat', sans-serif">Montserrat</option>
+  <option value="'Raleway', sans-serif">Raleway</option>
+  <option value="'Roboto', sans-serif">Roboto</option>
+  <option value="'Lato', sans-serif">Lato</option>
+  <option value="'Open Sans', sans-serif">Open Sans</option>
+  <option value="'Source Sans 3', sans-serif">Source Sans 3</option>
+  <option value="'Quicksand', sans-serif">Quicksand</option>
+  <option value="'Kanit', sans-serif">Kanit</option>
+  <option value="'Oswald', sans-serif">Oswald</option>
+  <option value="'Josefin Sans', sans-serif">Josefin Sans</option>
+  <option value="'Playfair Display', serif">Playfair Display</option>
+  <option value="'Merriweather', serif">Merriweather</option>
+</select>
+
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label for="notifToggle">Notifications</label>
+        <div class="toggle">
+          <input type="checkbox" id="notifToggle" />
+          <span id="notifStatus">OFF</span>
+        </div>
+        <small>Enable browser notifications for due tasks.</small>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button id="saveBtn">Save</button>
+      <a href="home.html" class="back-btn">Back to Planner</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

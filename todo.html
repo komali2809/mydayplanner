@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Nunito:wght@300;400;600&family=Montserrat:wght@300;400;600&family=Raleway:wght@300;400;600&family=Roboto:wght@300;400;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Source+Sans+3:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Kanit:wght@300;400;600&family=Oswald:wght@300;400;600&family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>To-Do - My Day Planner</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#6a82fb" />
+<link rel="stylesheet" href="style.css" />
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body data-page="todo">
+  <div class="sidebar">
+    <div class="sidebar-top">
+      <h2>📅 Planner</h2>
+      <button id="bellBtn" class="icon-btn" title="Notifications">🔔
+        <span id="bellBadge" class="badge" hidden></span>
+      </button>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="todo.html" class="active">To-Do</a>
+      <a href="recycle.html">Recycle Bin</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </div>
+
+  <main>
+    <h1>📝 To-Do List</h1>
+
+    <section class="task-form">
+      <input type="text" id="taskInput" placeholder="Enter task" />
+      <input type="text" id="dateTimeInput" placeholder="Select date & time" />
+      <select id="categoryInput">
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+        <option value="Exercise">Exercise</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="color" id="colorInput" value="#FFEB3B" />
+      <button id="addTaskBtn">Add Task</button>
+    </section>
+
+    <section class="filter">
+      <label>Filter by category:</label>
+      <select id="filterCategory">
+        <option value="all">All</option>
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+        <option value="Exercise">Exercise</option>
+        <option value="Other">Other</option>
+      </select>
+    </section>
+
+    <div id="taskWall" class="wall"></div>
+  </main>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    flatpickr("#dateTimeInput", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      minDate: "today",
+      time_24hr: false,
+      defaultDate: new Date()
+    });
+  });
+</script>
+
+</body>
+</html>
